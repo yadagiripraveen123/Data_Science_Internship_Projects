@@ -3,7 +3,7 @@ import streamlit as st
 st.title("Welcome to my web app")
 st.header("This is Yadagiri Praveen kumar")
 
-st.subheader("Here you Find the intersting Dashboards in this web app")
+st.subheader("As a Data scientist I created my Streamlit app here Take a look...!")
 st.subheader("Here you can connect me through github and linkedin")
 
 button = st.button("Click Here!")
