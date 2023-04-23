@@ -7,8 +7,8 @@ st.header("Display All Pubs Based on the Postal Code or Local Authority, display
 
 # Loading the dataframe
 FILE_DIR1 = os.path.dirname(os.path.abspath("__file__"))
-data_path = os.path.join(FILE_DIR1,"resources","open_pubs_cleaned.csv")
-pub_df = pd.read_csv(data_path)
+dir_of_interest = os.path.join(FILE_DIR1,"resources","data","open_pubs_cleaned.csv")
+pub_df = pd.read_csv(dir_of_interest)
 
 #Displaying Pub Locations by post Code, Local Authority
 unique=['Pub Name','Post Code', 'Local Authority']
