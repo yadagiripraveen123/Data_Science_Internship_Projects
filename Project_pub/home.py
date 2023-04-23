@@ -21,12 +21,10 @@ st.dataframe(pub_df)
 
 #  Display some statistics about the dataset
 st.subheader("Here are some statistics about the open pubs data")
-stats=['mean', 'median','count of the datapoints']
+stats=['mean', 'count of the datapoints']
 opt=st.radio(label="Select below options to see total count",options=stats, label_visibility ="visible")
 if opt=='mean':
     st.subheader(f"mean :Navy[{pub_df.mean().to_dict()}]")
-elif opt=='median':
-    st.subheader(f"median :Navy[{pub_df.median().to_dict()}]")
 elif opt=='count of the datapoints':
     st.subheader(f"count :Navy[{pub_df.count().to_dict()}]")
 st.write(pub_df.describe())
