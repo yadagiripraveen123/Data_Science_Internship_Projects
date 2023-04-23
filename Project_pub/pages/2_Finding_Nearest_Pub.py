@@ -9,7 +9,7 @@ st.header("Search for the Nearest Pubs")
 # Load data
 FILE_DIR1 = os.path.dirname(os.path.abspath("__file__"))
 data_path = os.path.join(FILE_DIR1,"resources","data","open_pubs_cleaned.csv")
-pub_df = pd.read_csv(f'data_path')
+pub_df = pd.read_csv(r'data_path')
 
 #Take input -latitude and longitude
 col1,col2=st.columns(2)
