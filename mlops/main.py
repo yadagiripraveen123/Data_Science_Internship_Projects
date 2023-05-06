@@ -2,6 +2,8 @@ import streamlit as st
 import numpy as np
 from pickle import load
 import sklearn
+import os
+import pandas as pd
 
 st.title(":blue[Medical Insurance Prediction]")
 st.subheader("Given the Required features for Predicting the Medical Insurance")
@@ -12,10 +14,14 @@ looking to protect their family, assets/property and themselves from financial r
 emergencies, hospitalisation, contraction of any illnesses and treatment, and medical care required in the future.""")
 
 
+FILE_DIR1 = os.path.dirname(os.path.abspath("__file__"))
+sc = os.path.join(FILE_DIR1,"resources",'standard_scaler.pkl')
+ohe = os.path.join(FILE_DIR1,"resources",'ohe_encoder.pkl')
+gbdt = os.path.join(FILE_DIR1,"resources",'gbdt_model.pkl')
 
-scaler = load(open(r"C:\Users\yadag\OneDrive\Desktop\Internship_Projects\mlops\resources\standard_scaler.pkl",'rb'))
-ohe = load(open(r"C:\Users\yadag\OneDrive\Desktop\Internship_Projects\mlops\resources\ohe_encoder.pkl",'rb'))
-gbdt_model = load(open(r"C:\Users\yadag\OneDrive\Desktop\Internship_Projects\mlops\resources\gbdt_model.pkl",'rb'))
+scaler = load(open(sc,'rb'))
+ohe = load(open(ohe,'rb'))
+gbdt_model = load(open(gbdt,'rb'))
 
 age = st.text_input('Age', placeholder='Enter the age')
 bmi = st.text_input('BMI', placeholder='Enter the BMI')
